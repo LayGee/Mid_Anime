@@ -1,0 +1,57 @@
+/*------------------------Background styles------------------------*/
+body {
+  background-color: #c1d2b8;
+  background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/10/Anime-Landscape-Wallpaper-HD.jpg");
+  background-size: cover;
+}
+  
+/*------------------------Header styles------------------------*/
+header {
+  text-align: center;
+  width: 50%;
+  margin-left: 300px;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  background-color: rgba(171, 174, 222, 0.558);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 5px 5px rgba(0, 0, 0, 0.381);
+}
+
+/*------------------------Table styles------------------------*/
+table {
+  border-collapse: collapse;
+  margin-top: 100px;
+  margin-left: 12%;
+  font-size: 1.2em;
+  background-color: rgba(137, 139, 199, 0.647);
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #888888;
+  overflow: hidden;
+}
+
+thead {
+  background-color: rgba(171, 174, 222, 0.922);
+  color: #3c434a;
+}
+
+.name {
+  color: rgb(0, 0, 0);
+}
+
+.name:hover {
+  background-color: unset !important;
+}
+
+td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: rgba(255, 255, 255, 0.708);
+}
+
+tr {
+  color: black;
+} 
+  

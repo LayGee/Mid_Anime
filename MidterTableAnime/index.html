@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <h2>My Anime Collections</h2>
+    </header>
+        <main>
+            <table>
+                <thead>
+                    <tr class="name">
+                        <th>ID</th>
+                        <th>Titles</th>
+                        <th>Authors</th>
+                        <th>Studios</th>
+                        <th>Episodes</th>
+                        <th>Genres</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                </tbody>
+            </table>
+        </main>
+
+    <script>
+        const xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", "mid_project/php/index.php");
+        xmlhttp.send();
+        xmlhttp.onload = function () {
+            const anime = JSON.parse(this.responseText);
+            var tableBody = document.getElementById("table-body");
+            tableBody.innerHTML = ""; // clear existing rows
+            for (var i in anime) {
+                var row = `<tr>
+                    <td>${anime[i].id}</td>
+                    <td>${anime[i].title}</td>
+                    <td>${anime[i].author}</td>
+                    <td>${anime[i].studio}</td>
+                    <td>${anime[i].episodes}</td>
+                    <td>${anime[i].genres}</td>
+                </tr>`;
+                tableBody.innerHTML += row;
+            }
+        };
+    </script>
+</body>
+</html>
